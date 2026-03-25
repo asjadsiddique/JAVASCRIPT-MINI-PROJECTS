@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgb(86, 131, 115);
+}
+hr{
+    width: 450px;
+    border: 1px solid  rgb(41, 82, 67);
+}
+
+h1{
+    color:  rgb(22, 46, 37);
+}
+#board{
+  height: 450px;
+  width: 450px;
+  /* background-color: red; */
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+#errors{
+    color:  rgb(22, 46, 37);
+}
+
+.tile{
+    height: 50px;
+    width: 50px;
+    border: 1px solid   rgb(41, 82, 67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#digits{
+    width: 450px;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+    /* background-color: rgb(32, 28, 28); */
+      display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number{
+    height: 44px;
+    width: 44px;
+    border: 1px solid  rgb(41, 82, 67);
+    margin: 3.4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 200ms transform;
+    
+}
+.number:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.change {
+    
+    background-color: rgb(41, 82, 67);
+    /* background-color: gray; */
+}
+.tile-color{
+    background-color: rgb(41, 82, 67);
+    /* background-color: rgb(223, 223, 223); */
+}
+
+.color-tile{
+    color: rgb(22, 46, 37);
+}
+
+.horizontal-line{
+    border-bottom: 1px solid rgb(11, 27, 22);
+}
+.vertical-line{
+    border-right: 1px solid rgb(11, 27, 22);
+}
