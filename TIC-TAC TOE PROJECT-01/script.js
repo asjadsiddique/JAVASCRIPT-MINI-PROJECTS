@@ -142,7 +142,7 @@ restart.addEventListener('click',(e) => {
 
 // We make grid-box by using Loop on boxes,
 // 1-Check weather spaces is empty or not,
-// 2-If emply player can click otherwise not,
+// 2-If box is empty player can click otherwise not,
 // 3-store that to index of array,
 // 4-Change Players Turn,
 // Check win conditions by using spaces[] 
