@@ -1,8 +1,7 @@
 let errors = 0;
-let tileselected = ""
 let numselected = "";
-let attempts ="";
-let remaining = "";
+
+
 
 let board = [
     
