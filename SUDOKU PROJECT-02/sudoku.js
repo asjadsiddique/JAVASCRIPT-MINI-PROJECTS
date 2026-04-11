@@ -2,7 +2,6 @@ let errors = 0;
 let numselected = "";
 
 
-
 let board = [
     
 "--74916-5",
@@ -89,10 +88,7 @@ function selecttile() {
         if(this.innerText != ""){
            return
         }
-       
-    } 
-    
-        let coords = this.id.split('-')
+       let coords = this.id.split('-')
         let r = parseInt(coords[0])
         let c = parseInt(coords[1])
        if (solution[r][c] === numselected.id) {
@@ -102,4 +98,7 @@ function selecttile() {
         errors += 1;
         document.getElementById('errors').innerText = errors;
        }
+    } 
+    
+        
 }
