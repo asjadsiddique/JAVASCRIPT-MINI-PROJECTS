@@ -77,9 +77,7 @@ function showQuestion() {
 
 function resetState() {
     nextbutton.style.display = "none"
-    while (answerButton.firstChild) {
-        answerButton.removeChild(answerButton.firstChild)
-    }
+  answerButton.innerHTML = "";
 }
 
 function selectanswer(e) {
