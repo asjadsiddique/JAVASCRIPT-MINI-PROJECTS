@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+
+:root{
+        /* Background colors */
+    --bg-primary-color : rgb(22, 22, 22);
+    --bg-fill-color : rgb(226, 226, 226);
+    --bg-modal-color: rgba(34, 34, 34, 0.678);
+
+      /* Text colors */
+
+      --text-primary-color : rgb(233, 233, 233);
+
+      /* --spacing variables */
+
+      --space-pd-xs: 4px;
+      --space-pd-sm: 8px;
+      --space-pd-md: 16px;
+      --space-pd-lg: 24px;
+      --space-pd-xl: 32px;
+      --space-pd-2xl: 40px;
+      --space-pd-3xl: 48px;
+
+      /* border color */
+
+      --border-primary-color : rgb(49, 49, 49);
+
+      /* Border radius  */
+
+      --border-radius-xs : 4px;
+      --border-radius-sm : 8px;
+      --border-radius-md : 12px;
+      --border-radius-lg : 16px;
+      --border-radius-xl : 20px;
+      --border-radius-2xl : 24px;
+      --border-radius-3xl : 28px;
+
+      
+
+}
+
+html{
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+}
+
+main,section {
+    height: 100%;
+    width: 100%;
+}
+
+section{
+   padding: var(--space-pd-2xl);
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-pd-lg);
+}
+
+section .infos{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.infos .info{
+    display: flex;
+    padding: var(--space-pd-sm) var(--space-pd-md);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-md);
+}
+
+.board{
+    border: 1px solid var(--border-primary-color) ;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
+   
+}
+
+
+.block{
+     /* height: 30px; */
+     /* width: 30px; */
+     border: 1px solid var(--border-primary-color);
+     border-radius: 50%;
+}
+
+.fill{
+    background-color: var(--bg-fill-color);
+}
+
+.food{
+    background-color: rgb(126, 90, 23);
+}
+
+.modal{
+    
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   background-color: var(--bg-modal-color);
+   backdrop-filter: blur(4px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.modal .start-game,
+.modal .end-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-pd-lg);
+    justify-content: center;
+}
+.modal .end-game{
+   display:none ;
+}
+
+.btn{
+    padding: var(--space-pd-sm) var(--space-pd-md);
+    border-radius: var(--border-radius-md);
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
