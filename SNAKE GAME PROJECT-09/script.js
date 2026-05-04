@@ -138,7 +138,7 @@ food = {x:Math.floor(Math.random () * rows) ,y: Math.floor(Math.random () * cols
     render()
   
     
-}, 100);
+}, 300);
 direction = "down"
 
 }
@@ -180,7 +180,7 @@ startButton.addEventListener('click',()=>{
     render()
   
     
-}, 100);
+}, 300);
 
 })
 

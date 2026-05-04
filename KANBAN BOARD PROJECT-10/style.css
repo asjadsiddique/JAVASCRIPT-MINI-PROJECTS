@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+
+     /* Backgroung colors */
+     --bg-color : rgb(24, 24, 24);
+     --bg-button-color: rgb(48, 48, 48);
+     --text-primary-color: rgb(230, 230, 230);
+     --bg-task-color: rgb(99, 99, 99);
+     --bg-textbox-color:rgb(41, 41, 41);
+     --bg-modal-color:rgba(51, 51, 51, 0.671);
+     --bg-deleteBtn-color: rgba(146, 21, 21, 0.877);
+
+
+     /* SPACING VARIABLES */
+
+     --nav-padding: 15px 30px;
+     --section-padding: 15px 30px;
+
+     /* Padding variables */
+
+     --padding-sm: 5px;
+     --padding-m: 10px;
+     --padding-l: 15px;
+     --padding-xl: 20px;
+     --padding-2xl: 25px;
+     --padding-3xl: 30px;
+
+     /* Border radius */
+
+     --border-radius-sm: 5px;
+     --border-radius-m: 10px;
+     --border-radius-l: 15px;
+     --border-radius-xl: 20px;
+     --border-radius-2xl: 25px;
+     --border-radius-3xl: 30px;
+}
+
+body{
+   
+    background-color: var(--bg-color);
+    color: var(--text-primary-color);
+
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: var(--nav-padding);
+     position: sticky;
+     top: 0;
+     background-color: var(--bg-color);
+}
+
+nav button{
+        border: none;
+        outline: none;
+      padding: var(--padding-l) var(--padding-l);
+      color: var(--text-primary-color);
+      background-color: var(--bg-button-color);
+      border-radius: var(--border-radius-sm);
+      cursor: pointer;
+}
+
+section{
+    flex-grow: 1;
+    padding: var(--section-padding);
+}
+section .centre{
+     width: 100%;
+    height: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: var(--padding-l);
+}
+section .centre .task-column{
+     flex-grow: 1;
+     background-color: var(--bg-button-color);
+     padding: var(--padding-l);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-m);
+    gap: var(--padding-l);
+   transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+   width: 100%;
+}
+
+.task-column.hover-over{
+ 
+      border: 2px dashed white;;
+        scale: 1.05;
+}
+.task-column .heading{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding-m);
+}
+
+.task-column .task{
+
+    background-color: var(--bg-task-color);
+    padding: var(--padding-xl);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    flex-direction: column;
+    cursor: grab;
+    
+}
+.task-column .task button{
+
+    align-self: flex-end;
+    border-radius: var(--border-radius-sm);
+    padding: var(--padding-sm);
+    color: var(--text-primary-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--bg-deleteBtn-color);
+}
+
+
+.modal{
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    
+
+
+}
+.modal .mid{
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-l);
+      padding: var(--padding-3xl);
+    color: var(--text-primary-color);
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius-sm);
+    z-index: 10;
+}
+.modal .mid input,.modal .mid textarea{
+             
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius-sm);
+    padding: var(--padding-m);
+    background-color: var(--bg-textbox-color);
+    color: var(--text-primary-color);
+}
+
+
+.modal .mid button{
+
+    border: none;
+    outline: none;
+    background-color: var(--bg-button-color);
+    border-radius: var(--border-radius-sm);
+    padding: var(--padding-m);
+    color: var(--text-primary-color);
+    align-self: center;
+    cursor: pointer;
+}
+
+.modal.active{
+    display: flex;
+}
+
+.bg{
+    width: 100%;
+    
+    height: 100%;
+    position: absolute;
+
+
+        background-color: var(--bg-modal-color);
+    backdrop-filter: blur(5px);
+}
